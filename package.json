@@ -1,0 +1,30 @@
+{
+  "name": "UniversalIR",
+  "version": "0.0.1",
+  "description": "UniversalIR Controller",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/UniversalIR.git"
+  },
+  "keywords": [
+    "micro-app-framework",
+    "micro-app",
+    "mqtt"
+  ],
+  "author": "Michael Dawson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/UniversalIR/issues"
+  },
+  "homepage": "https://github.com/mhdawson/UniversalIR#readme",
+  "dependencies": {
+    "micro-app-framework": "^0.1.4",
+    "mqtt": "^2.0.1",
+    "socket.io": "^1.5.0"
+  }
+}

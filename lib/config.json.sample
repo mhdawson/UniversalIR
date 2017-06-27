@@ -1,0 +1,14 @@
+{
+  "title": "Universal IR",
+  "windowSize": { "x": 300, "y": 300 },
+  "serverPort": 14000,
+  "eventLogPrefix": "/home/user1/repo/UniversalIR",
+  "mqtt": [ { "serverUrl": "mqtt:10.1.1.186:1883",
+              "requestTopic": "house/livtv",
+              "commands": { "mediaplayer": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1", "delay": 6000 },
+                                             { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1", "delay": 1000 } ],
+                            "tv": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi2" } ]
+                          }
+            }
+          ]
+}
