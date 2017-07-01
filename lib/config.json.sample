@@ -5,10 +5,18 @@
   "eventLogPrefix": "/home/user1/repo/UniversalIR",
   "mqtt": [ { "serverUrl": "mqtt:10.1.1.186:1883",
               "requestTopic": "house/livtv",
-              "commands": { "mediaplayer": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1", "delay": 6000 },
-                                             { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1", "delay": 1000 } ],
-                            "tv": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi2" } ]
-                          }
+              "commands": { "mediaplayer": [ { "topic": "house/ir", "command": "rca-tv1/power", "delay": 500, "state": {"dev": "tv", "state": "power" }},
+                                             { "topic": "house/ir", "command": "x2/power", "delay": 500, "state": {"dev": "x2", "state": "power" }},
+                                             { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1" } ],
+                            "tv": [ { "topic": "house/ir", "command": "rca-tv1/power", "delay": 500, "state": {"dev": "tv", "state": "power" }},
+                                    { "topic": "house/ir", "command": "8642HD/power", "delay": 500, "state": {"dev": "cable", "state": "power" }},
+                                    { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi2" } ],
+                            "off": [ ]
+                          },
+              "state": { "x2": { "power-off": { "topic": "house/ir", "command": "x2/power", "delay": 500 }},
+                         "cable": { "power-off": { "topic": "house/ir", "command": "8642HD/power", "delay": 500 }},
+                         "tv": { "power-off": { "topic": "house/ir", "command": "rca-tv1/power", "delay": 500 }}
+                       }
             }
           ]
 }
