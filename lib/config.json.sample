@@ -19,6 +19,14 @@
                          "cable": { "power-off": { "topic": "house/ir", "command": "8642HD/power", "delay": 1000 }},
                          "tv": { "power-off": { "topic": "house/ir", "command": "rca-tv1/power", "delay": 1000 }}
                        }
+            },
+            { "serverUrl": "mqtt:10.1.1.186:1883",
+              "requestTopic": "house/1527/350/010101010101010100110000",
+              "commands": { "010101010101010100110000": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi1" } ] }
+            },
+            { "serverUrl": "mqtt:10.1.1.186:1883",
+              "requestTopic": "house/1527/350/010101010101010111000000",
+              "commands": { "010101010101010111000000": [ { "topic": "house/ir", "command": "neoteck-hdmi-sw-5/hdmi2" } ] }
             }
           ]
 }
